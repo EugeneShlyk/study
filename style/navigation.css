@@ -1,4 +1,5 @@
 .navigation {
+  width: 100%;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -12,13 +13,64 @@
 .navigation__list {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .navigation__item {
+  position: relative;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.navigation__item--all-courses::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -26px;
+  width: 20px;
+  height: 16px;
+  background-image: url("./../photo/header/all-courses-black.svg");
+}
+
+.navigation__item--city {
+  position: relative;
+}
+
+.navigation__item--city::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -126px;
+  width: 17px;
+  height: 20px;
+  background-image: url("./../photo/header/location.svg");
+}
+
+.navigation__item-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.navigation__item-link:hover,
+.navigation__item-link:focus-visible {
+  opacity: 0.6;
+}
+
+.navigation__item-link:active {
+  opacity: 0.3;
+}
+
+.navigation__item-link--city {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  border: none;
 }

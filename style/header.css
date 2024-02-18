@@ -8,13 +8,21 @@
 .header__inner {
   display: flex;
   align-items: center;
-  width: 1180px;
+  width: 1194px;
   margin: 0 auto;
-  padding: 20px 0;
-  background: red;
+  padding: 18px 0;
 }
 
 .header__logo {
-  margin: 0 63px 0 0;
+  margin: 0 84px 0 7px;
   padding: 0;
+}
+
+.header__logo:hover,
+.header__logo:focus-visible {
+  opacity: 0.6;
+}
+
+.header__logo:active {
+  opacity: 0.3;
 }
