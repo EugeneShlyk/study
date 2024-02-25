@@ -3,5 +3,17 @@
 @import "global.css";
 @import "navigation.css";
 @import "fonts.css";
-@import "variables.css";
 
+.penis {
+  width: 200px;
+  height: 200px;
+  background: orange;
+  cursor: pointer;
+}
+
+.vagina {
+  width: 200px;
+  height: 200px;
+  background: blueviolet;
+  cursor: pointer;
+}
