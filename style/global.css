@@ -16,4 +16,6 @@
 
 .main {
   flex-grow: 1;
+  width: 1194px;
+  margin: auto;
 }
