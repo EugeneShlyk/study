@@ -4,16 +4,44 @@
 @import "navigation.css";
 @import "fonts.css";
 
-.penis {
-  width: 200px;
-  height: 200px;
-  background: orange;
+.box {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  min-height: 220px;
+  width: fit-content;
+  gap: 10px;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
   cursor: pointer;
 }
 
-.vagina {
-  width: 200px;
-  height: 200px;
-  background: blueviolet;
-  cursor: pointer;
+.book--one {
+  background-color: aqua;
+}
+
+.book--two {
+  background-color: cadetblue;
+}
+
+.book--three {
+  background-color: blue;
+}
+
+.book--four {
+  background-color: chartreuse;
+}
+
+.book--five {
+  background-color: blueviolet;
+}
+
+.book--six {
+  background-color: red;
 }
