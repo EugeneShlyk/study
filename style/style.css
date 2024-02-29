@@ -22,26 +22,26 @@
   cursor: pointer;
 }
 
-.book--one {
+.book-1 {
   background-color: aqua;
 }
 
-.book--two {
+.book-2 {
   background-color: cadetblue;
 }
 
-.book--three {
+.book-3 {
   background-color: blue;
 }
 
-.book--four {
+.book-4 {
   background-color: chartreuse;
 }
 
-.book--five {
+.book-5 {
   background-color: blueviolet;
 }
 
-.book--six {
+.book-6 {
   background-color: red;
 }

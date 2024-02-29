@@ -1,9 +1,14 @@
 let boxes = document.querySelectorAll('.box');
 let circles = document.querySelectorAll('.circle');
+let templateFragment = document.querySelector('#template').content;
+let template = templateFragment.querySelector('div');
+let fragment = document.createDocumentFragment();
+console.log(boxes[0]);
 
-circles[0].addEventListener('click', (evt) => {
-  boxes[1].append(evt.cloneNode(true));
-})
+for (let i = 0; i < 6; i++) {
+
+}
+
 
 
 

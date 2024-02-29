@@ -15,7 +15,16 @@
 }
 
 .main {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
   flex-grow: 1;
   width: 1194px;
   margin: auto;
+}
+
+.box {
+  min-width: 320px;
+  min-height: 220px;
 }
