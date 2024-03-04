@@ -20,7 +20,8 @@
   align-items: start;
   justify-content: space-between;
   flex-grow: 1;
-  width: 1194px;
+  width: 100%;
+  max-width: 1194px;
   margin: auto;
 }
 

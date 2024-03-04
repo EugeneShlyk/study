@@ -22,6 +22,10 @@
   cursor: pointer;
 }
 
+.circle span {
+  pointer-events: none;
+}
+
 .book-1 {
   background-color: aqua;
 }
