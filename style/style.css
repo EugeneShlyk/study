@@ -3,6 +3,7 @@
 @import "global.css";
 @import "navigation.css";
 @import "fonts.css";
+@import "popup.css";
 
 .box {
   display: grid;
@@ -44,4 +45,11 @@
 
 .book-6 {
   background-color: red;
+}
+
+.template__inner {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  /*background-color: brown;*/
 }

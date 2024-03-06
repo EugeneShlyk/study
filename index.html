@@ -29,7 +29,7 @@
     <nav class="navigation">
       <ul class="navigation__list">
         <li class="navigation__item navigation__item--all-courses">
-          <a class="navigation__item-link" href="#">Все курсы</a>
+          <a class="navigation__item-link" href="popup.html">К попапу</a>
         </li>
         <li class="navigation__item">
           <a class="navigation__item-link" href="#">Мероприятия</a>
@@ -69,17 +69,20 @@
     <div class="circle book-6"><span>6</span></div>
   </div>
 
-  <div class="box"></div>
+  <div class="box-render-circle">
 
-  <template id="template">
-    <div class="circle">
-      <span></span>
-    </div>
-  </template>
+  </div>
 
 </main>
 
 <footer class="footer"></footer>
+
+<template id="template" class="template">
+  <div class="template__inner">
+    <span class="template__inner-box"></span>
+  </div>
+</template>
+
 <script src="js/main.js" type="module"></script>
 </body>
 </html>
