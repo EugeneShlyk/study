@@ -1,24 +1,12 @@
-let buttons = document.querySelectorAll('.button');
-let circles = document.querySelectorAll('.circle');
+let placeToInsert = document.querySelector('.paste-here');
+let circleTemplate = document.querySelector('#template').content.querySelector('.template__inner');
 
-let handleClick = (event) => {
-  // console.log(parseInt(event.currentTarget.textContent));
-  let numberButton = event.currentTarget.textContent;
-  // console.log(numberButton);
 
-  let isNecessary = circles.some((circle) =>
-    1 === 1
-    // circle.textContent = numberButton
-    // console.log('подходит кнопка' + circle);
-  );
-  console.log(isNecessary);
+let func = () => {
+  let cloneCircleTemplate = circleTemplate.cloneNode(true);
+  return placeToInsert.append(cloneCircleTemplate);
 }
-
-buttons.forEach(button => {
-  button.addEventListener('click', handleClick)
-})
-
-
-
+Array.from({length: 4}, func)
+// placeToInsert.append(cloneCircleTemplate);
 
 

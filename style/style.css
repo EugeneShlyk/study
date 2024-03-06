@@ -49,3 +49,14 @@
 .book-6 {
   background-color: red;
 }
+
+.template__circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.paste-here {
+
+}
