@@ -38,25 +38,14 @@ let func = () => {
   boxRender.append(clone);
 };
 
+let list = document.querySelector('.list-js')
 
-// Находим на странице кнопку и попап
-const button = document.querySelector('.click-button');
-const popup = document.querySelector('.content');
 
-// Навешиваем на кнопку обработчик клика
-function handlePopup(evt) {
-  // Отменяем переход по ссылке
-  evt.preventDefault();
-
-  // Добавляем попапу класс show, делая его видимым
-  popup.classList.add('show');
-
+// script.js
+const onListClick = function (evt) {
+  if (evt.target.nodeName === 'LI') {
+    console.log('ты, сучара на элемент списка нажал,  понял?');
+  }
 }
 
-button.addEventListener('click', handlePopup);
-
-
-
-
-
-
+list.addEventListener('click', onListClick)
