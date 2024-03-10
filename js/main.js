@@ -38,14 +38,9 @@ let func = () => {
   boxRender.append(clone);
 };
 
-let list = document.querySelector('.list-js')
+let selectedProduct = document.querySelector('#selected product');
+let intuts = document.querySelectorAll('input[type="radio"]');
 
+let handleRadioButton = (evt) => {
 
-// script.js
-const onListClick = function (evt) {
-  if (evt.target.nodeName === 'LI') {
-    console.log('ты, сучара на элемент списка нажал,  понял?');
-  }
 }
-
-list.addEventListener('click', onListClick)

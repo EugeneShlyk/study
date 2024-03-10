@@ -12,14 +12,32 @@
 </header>
 
 <main class="main">
-  
-  <ul class="list-js"> <!-- onListClick() -->
-    <li>...</li>
-    <li>...</li>
-    <li>...</li>
-    <li>...</li>
-    <li>...</li>
-  </ul>
+
+  <form>
+    <legend>Товары для иноагентов</legend>
+    <ul>
+      <li>
+        <label>
+          <input type="radio" name="sale" value="кирпич" checked>
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="radio" name="sale" value="коктейль молотова">
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="radio" name="sale" value="футболка Привет, это навальный">
+        </label>
+      </li>
+    </ul>
+
+    <p>Вы выбрали <span id="selected product"></span></p>
+
+  </form>
+
+
 
 </main>
 
