@@ -12,33 +12,41 @@
 </header>
 
 <main class="main">
-
-  <form>
-    <legend>Товары для иноагентов</legend>
-    <ul>
-      <li>
-        <label>
-          <input type="radio" name="sale" value="кирпич" checked>
-        </label>
-      </li>
-      <li>
-        <label>
-          <input type="radio" name="sale" value="коктейль молотова">
-        </label>
-      </li>
-      <li>
-        <label>
-          <input type="radio" name="sale" value="футболка Привет, это навальный">
-        </label>
-      </li>
-    </ul>
-
-    <p>Вы выбрали <span id="selected product"></span></p>
-
+  
+  <form class="form">
+    <fieldset>
+      <legend>Выберите аргументы иноагента</legend>
+      <ul class="list-input">
+        <li>
+          <label>
+            <input type="radio" name="sale" value="Коктейль молотова" checked>
+            Коктейль молотова
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="radio" name="sale" value="бензопила">
+            бензопила
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="radio" name="sale" value="топор">
+            топор
+          </label>
+        </li>
+      </ul>
+  
+      <p>вы выбрали "<span id="selected-product"></span>".</p>
+    </fieldset>
+    <p>
+      <label>
+        <input type="checkbox" name="only_available" value="Только в наличии">
+        Только в наличии
+      </label>
+    </p>
   </form>
-
-
-
+  
 </main>
 
 <footer class="footer"></footer>

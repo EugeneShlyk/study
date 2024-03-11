@@ -1,5 +1,4 @@
 const CIRCLE_COLOR = [
-  // 'black',
   'red',
   'blue',
   'yellow',
@@ -38,9 +37,13 @@ let func = () => {
   boxRender.append(clone);
 };
 
-let selectedProduct = document.querySelector('#selected product');
-let intuts = document.querySelectorAll('input[type="radio"]');
+let form = document.querySelector('.form');
+let placeSelectedProduct = document.querySelector('#selected-product');
 
-let handleRadioButton = (evt) => {
-
+let handleSelectedProduct = (evt) => {
+  if ( evt.target.matches('input[type="radio"]') ) {
+    placeSelectedProduct.textContent = evt.target.value;
+  }
 }
+
+form.addEventListener('change', handleSelectedProduct);
