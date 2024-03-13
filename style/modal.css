@@ -1,4 +1,5 @@
 .modal {
+  position: relative;
   width: 500px;
   height: 500px;
   margin: auto;
@@ -10,7 +11,20 @@
   border: 5px solid green;
 }
 
+.modal__button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
 
+.modal__button:hover path {
+  fill: rgba(0, 0, 0, 0.5);
+}
 
 .modal__title {
   width: fit-content;
