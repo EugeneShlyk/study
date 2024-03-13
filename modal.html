@@ -1,31 +1,32 @@
 <!doctype html>
-<html class="html" lang="ru">
+<html lang="ru">
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Document</title>
-  <link href="style/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
 </head>
-<body class="body">
+<body>
+
 <header class="header">
   <div class="header__inner">
     <a class="header__logo" href="#">
       <picture>
         <source
-            media="(max-width: 320px)"
-            srcset="./photo/header/logo-mobile.svg"
-            width="57"
-            height="40"
+          media="(max-width: 320px)"
+          srcset="./photo/header/logo-mobile.svg"
+          width="57"
+          height="40"
         >
         <img
-            alt="логотип сайта"
-            src="./photo/header/logo-blue.svg"
-            width="110"
-            height="70"
+          alt="логотип сайта"
+          src="./photo/header/logo-blue.svg"
+          width="110"
+          height="70"
         >
       </picture>
     </a>
-
+    
     <nav class="navigation">
       <ul class="navigation__list">
         <li class="navigation__item navigation__item--all-courses">
@@ -59,30 +60,20 @@
 </header>
 
 
-<main class="main">
-  <div class="box">
-    <div class="circle book-1"><span>1</span></div>
-    <div class="circle book-2"><span>2</span></div>
-    <div class="circle book-3"><span>3</span></div>
-    <div class="circle book-4"><span>4</span></div>
-    <div class="circle book-5"><span>5</span></div>
-    <div class="circle book-6"><span>6</span></div>
-  </div>
+<div class="modal">
+  <button class="modal__button" type="button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 13 13"/>
+<!--    <img-->
+<!--      src="./photo/sprite/close-modal.svg"-->
+<!--      alt="закрытие модального окна"-->
+<!--      width="13"-->
+<!--      height="13"-->
+<!--    >-->
+  </button>
+  <h1 class="modal__title">Модальное окно</h1>
+</div>
 
-  <div class="box-render-circle">
 
-  </div>
-
-</main>
-
-<footer class="footer"></footer>
-
-<template id="template" class="template">
-  <div class="template__inner">
-    <span class="template__inner-box"></span>
-  </div>
-</template>
-
-<script src="js/main.js" type="module"></script>
+<script src="script.js"></script>
 </body>
 </html>

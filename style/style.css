@@ -4,52 +4,5 @@
 @import "navigation.css";
 @import "fonts.css";
 @import "popup.css";
+@import "modal.css";
 
-.box {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  min-height: 220px;
-  width: fit-content;
-  gap: 10px;
-}
-
-.circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.book-1 {
-  background-color: aqua;
-}
-
-.book-2 {
-  background-color: cadetblue;
-}
-
-.book-3 {
-  background-color: blue;
-}
-
-.book-4 {
-  background-color: chartreuse;
-}
-
-.book-5 {
-  background-color: blueviolet;
-}
-
-.book-6 {
-  background-color: red;
-}
-
-.template__inner {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  /*background-color: brown;*/
-}
