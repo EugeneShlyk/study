@@ -1,3 +1,5 @@
+// import { handleOpenModal } from './show-modal';
+
 const CIRCLE_COLOR = [
   'red',
   'blue',
@@ -36,5 +38,27 @@ let func = () => {
 
   boxRender.append(clone);
 };
+
+let modalButton = document.querySelector('.open-modal');
+let modal = document.querySelector('.modal');
+let modalCloseButton = document.querySelector('.modal__close-button');
+
+let handleOpenModal = () => {
+  modal.classList.remove('invisible');
+  modalButton.classList.add('invisible');
+
+  modalButton.removeEventListener('click', handleOpenModal);
+  modalCloseButton.addEventListener('click', handleCloseModal);
+}
+
+let handleCloseModal = () => {
+  modal.classList.add('invisible');
+  modalButton.classList.remove('invisible');
+
+  modalButton.addEventListener('click', handleOpenModal);
+  modalCloseButton.removeEventListener('click', handleCloseModal);
+}
+
+modalButton.addEventListener('click', handleOpenModal);
 
 

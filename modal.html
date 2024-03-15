@@ -8,25 +8,33 @@
 </head>
 <body>
 
+<svg class="sprite">
+  <symbol class="close-window" id="close-window" viewBox="0 0 64 64">
+    <path
+      d="M22.607 21.393a1 1 0 0 0-1.415 1.415l1.415-1.415ZM40.99 42.607a1 1 0 0 0 1.415-1.415l-1.415 1.415Zm-19.799-1.415a1 1 0 0 0 1.415 1.415l-1.415-1.415Zm21.214-18.384a1 1 0 0 0-1.415-1.415l1.415 1.415Zm-21.214 0 19.8 19.799 1.414-1.415-19.8-19.799-1.414 1.415Zm1.415 19.799 19.799-19.8-1.415-1.414-19.799 19.8 1.415 1.414Z"
+    />
+  </symbol>
+</svg>
+
 <header class="header">
   <div class="header__inner">
     <a class="header__logo" href="#">
       <picture>
         <source
-            media="(max-width: 320px)"
-            srcset="./photo/header/logo-mobile.svg"
-            width="57"
-            height="40"
+          media="(max-width: 320px)"
+          srcset="./photo/header/logo-mobile.svg"
+          width="57"
+          height="40"
         >
         <img
-            alt="логотип сайта"
-            src="./photo/header/logo-blue.svg"
-            width="110"
-            height="70"
+          alt="логотип сайта"
+          src="./photo/header/logo-blue.svg"
+          width="110"
+          height="70"
         >
       </picture>
     </a>
-
+    
     <nav class="navigation">
       <ul class="navigation__list">
         <li class="navigation__item navigation__item--all-courses">
@@ -59,17 +67,14 @@
   </div>
 </header>
 
+<button class="open-modal">
+  Открыть модальное окно
+</button>
 
-<div class="modal">
-  <button class="modal__button" type="button">
-    <!--    <svg width="32" height="32" aria-hidden="true">-->
-    <!--      <use xlink:href="./photo/sprite/close-window.svg"></use>-->
-    <!--    </svg>-->
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 64 64">
-      <path
-          fill="#000"
-          d="M22.607 21.393a1 1 0 0 0-1.415 1.415l1.415-1.415ZM40.99 42.607a1 1 0 0 0 1.415-1.415l-1.415 1.415Zm-19.799-1.415a1 1 0 0 0 1.415 1.415l-1.415-1.415Zm21.214-18.384a1 1 0 0 0-1.415-1.415l1.415 1.415Zm-21.214 0 19.8 19.799 1.414-1.415-19.8-19.799-1.414 1.415Zm1.415 19.799 19.799-19.8-1.415-1.414-19.799 19.8 1.415 1.414Z"
-      />
+<div class="modal invisible">
+  <button class="modal__close-button" type="button" aria-label="закрыть модальное окно">
+    <svg class="modal__button-icon" width="32" height="32">
+      <use href="#close-window"></use>
     </svg>
   </button>
   <h1 class="modal__title">Модальное окно</h1>

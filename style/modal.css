@@ -1,3 +1,15 @@
+.sprite {
+  display: none;
+}
+
+.open-modal {
+  display: block;
+  margin: auto;
+  padding: 5px;
+  background-color: inherit;
+  border: 2px solid greenyellow;
+}
+
 .modal {
   position: relative;
   width: 500px;
@@ -11,9 +23,9 @@
   border: 5px solid green;
 }
 
-.modal__button {
+.modal__close-button {
   position: absolute;
-  top: 15px;
+  top: 27px;
   right: 15px;
   margin: 0;
   padding: 0;
@@ -22,11 +34,19 @@
   background-color: transparent;
 }
 
-.modal__button:hover path {
-  fill: rgba(0, 0, 0, 0.5);
-}
-
 .modal__title {
   width: fit-content;
   margin: auto;
+}
+
+.modal__button-icon {
+  fill: rgba(255, 99, 71, 1);
+}
+
+.modal__button-icon:hover {
+  fill: rgba(255, 99, 71, 0.5);
+}
+
+.invisible {
+  display: none;
 }
