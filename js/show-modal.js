@@ -1,36 +1,48 @@
-// import { isEscapeKey } from '/js/utils.js';
+import { isEscapeKey, isEnterKey } from './utils.js';
 
-let modalButton = document.querySelector('.open-modal');
-let modal = document.querySelector('.modal');
-let modalCloseButton = document.querySelector('.modal__close-button');
+let modalJs = () => {
+  let modalOpenButton = document.querySelector('.open-modal');
+  let modal = document.querySelector('.modal');
+  let modalCloseButton = document.querySelector('.modal__close-button');
 
-let handleEscapeKeydown = (evt) => {
-  if ( evt.key === 'Escape' ) {
-    evt.preventDefault();
-    modal.classList.add('invisible');
-    modalButton.classList.remove('invisible');
+  let openModal = () => {
+    modal.classList.remove('invisible');
+    modalOpenButton.classList.add('invisible');
 
-    modalButton.addEventListener('click', handleOpenModal);
-    modalCloseButton.removeEventListener('click', handleCloseModal);
+    modalOpenButton.removeEventListener('click', openModal);
+    modalCloseButton.addEventListener('click', closeModal);
+    document.addEventListener('keydown', handleEscapeKeydown);
+    modalOpenButton.removeEventListener('keydown', handleEnterKeydown);
   }
+
+  let closeModal = () => {
+    modal.classList.add('invisible');
+    modalOpenButton.classList.remove('invisible');
+
+    modalOpenButton.addEventListener('click', openModal);
+    modalCloseButton.removeEventListener('click', closeModal);
+    document.removeEventListener(`keydown`, handleEscapeKeydown);
+    modalOpenButton.addEventListener('keydown', handleEnterKeydown);
+  }
+
+  let handleEscapeKeydown = (evt) => {
+    if ( isEscapeKey(evt) ) {
+      evt.preventDefault();
+      closeModal();
+    }
+  }
+
+  let handleEnterKeydown = (evt) => {
+    if ( isEnterKey(evt) ) {
+      evt.preventDefault();
+      openModal();
+    }
+  }
+
+  modalOpenButton.addEventListener('click', openModal);
+  modalOpenButton.addEventListener('keydown', handleEnterKeydown);
 }
 
-let handleOpenModal = () => {
-  modal.classList.remove('invisible');
-  modalButton.classList.add('invisible');
+export { modalJs };
 
-  modalButton.removeEventListener('click', handleOpenModal);
-  modalCloseButton.addEventListener('click', handleCloseModal);
-  document.addEventListener('keydown', handleEscapeKeydown);
-}
 
-let handleCloseModal = () => {
-  modal.classList.add('invisible');
-  modalButton.classList.remove('invisible');
-
-  modalButton.addEventListener('click', handleOpenModal);
-  modalCloseButton.removeEventListener('click', handleCloseModal);
-  document.removeEventListener(`keydown`, handleEscapeKeydown);
-}
-
-modalButton.addEventListener('click', handleOpenModal);

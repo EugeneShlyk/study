@@ -4,10 +4,22 @@
 
 .open-modal {
   display: block;
+  width: fit-content;
   margin: auto;
   padding: 5px;
   background-color: inherit;
   border: 2px solid greenyellow;
+  cursor: pointer;
+}
+
+.open-modal:hover,
+.open-modal:focus {
+  background-color: yellow;
+  outline: none;
+}
+
+.open-modal:active {
+  background-color: greenyellow;
 }
 
 .modal {
