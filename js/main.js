@@ -1,4 +1,5 @@
 import { modalJs } from './show-modal.js';
+import { getRandomArrayElement } from './utils.js';
 
 modalJs();
 
@@ -13,10 +14,19 @@ const Color = {
 };
 
 let head = document.querySelector('.template');
-let eyes = head.querySelectorAll('.template__eye');
+let leftEye = head.querySelector('.template__left-eye');
+let rightEye = head.querySelector('.template__right-eye');
+let leftEyeInput = head.querySelector('[name = "color-left-eye"]');
 
-eyes.forEach((eye) => {
-  eye.addEventListener('click', () => {
-    eye.style.backgroundColor = 'red';
-  })
-})
+
+leftEye.addEventListener('click', (evt) => {
+  let randomColor = getRandomArrayElement(Color.FIREBALLS);
+  evt.target.style.backgroundColor = randomColor;
+  leftEyeInput.value = randomColor;
+});
+
+rightEye.addEventListener('click', (evt) => {
+  let randomColor = getRandomArrayElement(Color.FIREBALLS);
+  evt.target.style.backgroundColor = randomColor;
+  leftEyeInput.value = randomColor;
+});

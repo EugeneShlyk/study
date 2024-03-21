@@ -1,5 +1,16 @@
+const getRandomInteger = (a, b) => {
+  const lower = Math.ceil(Math.min(a, b));
+  const upper = Math.floor(Math.max(a, b));
+  const result = Math.random() * (upper - lower + 1) + lower;
+  return Math.floor(result);
+};
+
+let getRandomArrayElement = (elements) => elements[getRandomInteger(0, elements.length - 1)];
+
 let isEscapeKey = (evt) => evt.key === 'Escape';
 let isEnterKey = (evt) => evt.key === 'Enter';
 
-export { isEscapeKey, isEnterKey };
+
+
+export { getRandomArrayElement, isEscapeKey, isEnterKey };
 
