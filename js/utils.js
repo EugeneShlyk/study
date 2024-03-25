@@ -10,7 +10,4 @@ let getRandomArrayElement = (elements) => elements[getRandomInteger(0, elements.
 let isEscapeKey = (evt) => evt.key === 'Escape';
 let isEnterKey = (evt) => evt.key === 'Enter';
 
-
-
 export { getRandomArrayElement, isEscapeKey, isEnterKey };
-

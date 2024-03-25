@@ -34,7 +34,7 @@
         >
       </picture>
     </a>
-
+    
     <nav class="navigation">
       <ul class="navigation__list">
         <li class="navigation__item navigation__item--all-courses">
@@ -72,27 +72,46 @@
 </div>
 
 <div class="modal invisible">
-  <button class="modal__close-button" type="button" aria-label="закрыть модальное окно">
-    <svg class="modal__button-icon" width="32" height="32">
-      <use href="#close-window"></use>
-    </svg>
-  </button>
-  <h1 class="modal__title">Модальное окно</h1>
+  <form action="https://echo.htmlacademy.ru/" method="post" enctype="multipart/form-data" autocomplete="off">
+    <button class="modal__close-button" type="button" aria-label="закрыть модальное окно">
+      <svg class="modal__button-icon" width="32" height="32">
+        <use href="#close-window"></use>
+      </svg>
+    </button>
+    <h1 class="modal__title">Модальное окно</h1>
+    <div class="modal__upload">
+      <img src="./photo/avatar.svg" alt="аватар">
+      <input class="modal__upload-input" type="file" name="avatar">
+    </div>
+    <label class="modal__nickname-label">
+      <span class="modal__nickname-title">Ваше имя</span>
+      <input
+        class="modal__nickname-input"
+        type="text"
+        name="username"
+        value="Адольф Гитлер"
+        required
+        minlength="2"
+        maxlength="25"
+      >
+    </label>
+    
+    <button class="modal__button-submit" type="submit">Отправить</button>
+  </form>
 </div>
 
-  <div class="template">
-    <div class="template__eyes-box">
-      <div class="template__left-eye template__change-element"></div>
-      <div class="template__right-eye template__change-element"></div>
-    </div>
-    <div class="template__nose template__change-element"></div>
-    <div class="template__mouth template__change-element"></div>
-    <label><input type="text" name="color-left-eye"></label>
-    <label><input type="text" name="color-right-eye"></label>
-    <label><input type="text" name="color-nose"></label>
-    <label><input type="text" name="color-mouth"></label>
+<div class="template">
+  <div class="template__eyes-box">
+    <div class="template__left-eye template__change-element"></div>
+    <div class="template__right-eye template__change-element"></div>
   </div>
-
+  <div class="template__nose template__change-element"></div>
+  <div class="template__mouth template__change-element"></div>
+  <label><input type="text" name="color-left-eye"></label>
+  <label><input type="text" name="color-right-eye"></label>
+  <label><input type="text" name="color-nose"></label>
+  <label><input type="text" name="color-mouth"></label>
+</div>
 
 <script src="js/main.js" type="module"></script>
 </body>

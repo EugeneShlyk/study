@@ -48,7 +48,11 @@
 
 .modal__title {
   width: fit-content;
-  margin: auto;
+  margin: 0 auto 20px;
+}
+
+.modal__upload {
+  margin: 0 auto 20px;
 }
 
 .modal__button-icon {
@@ -59,6 +63,36 @@
   fill: rgba(255, 99, 71, 0.5);
 }
 
-.invisible {
-  display: none;
+.modal__nickname-label {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto 20px;
 }
+
+.modal__nickname-title {
+  margin: 0 20px 0 0;
+  padding: 0;
+}
+
+.modal__nickname-input {
+  display: block;
+  margin: 0;
+  padding: 6px;
+}
+
+.modal__button-submit {
+  display: block;
+  margin: 0 auto;
+  padding: 6px;
+  background-color: aqua;
+  border: blue;
+  cursor: pointer;
+}
+
+
+
+
+/*.invisible {*/
+/*  display: none;*/
+/*}*/
