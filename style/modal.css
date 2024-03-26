@@ -90,7 +90,11 @@
   cursor: pointer;
 }
 
-
+/*.modal__ui-slider-box {*/
+/*  min-height: 100px;*/
+/*  color: white;*/
+/*  background-color: blue;*/
+/*}*/
 
 
 /*.invisible {*/

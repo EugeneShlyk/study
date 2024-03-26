@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Document</title>
   <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="libs/nouislider.min.css">
 </head>
 <body>
 
@@ -50,11 +51,13 @@
           <a class="navigation__item-link" href="#">Карьера</a>
         </li>
         <li class="navigation__item navigation__item--city">
-          <select class="navigation__item-link navigation__item-link--city" href="#">
-            <option>Нижний Новгород</option>
-            <option>Находка</option>
-            <option>Голубовка</option>
-          </select>
+          <label>
+            <select class="navigation__item-link navigation__item-link--city">
+              <option>Нижний Новгород</option>
+              <option>Находка</option>
+              <option>Голубовка</option>
+            </select>
+          </label>
         </li>
         <li class="navigation__item">
           <a class="navigation__item-link" href="#">8 800 950-33-98 </a>
@@ -96,6 +99,23 @@
       >
     </label>
     
+    <div class="filters-price">
+      <h2 class="filters-price__title">Цена</h2>
+      <div class="filters-price__slider" id="range-slider"></div>
+      <div class="filters-price__inputs">
+        <label class="filters-price__label">
+          <span class="filters-price__text">От</span>
+          <input class="filters-price__input" id="range-input-min" type="number" name="min-price" min="500" max="999999" placeholder="500">
+          <span class="filters-price__text">Р</span>
+        </label>
+        <label class="filters-price__label">
+          <span class="filters-price__text">До</span>
+          <input class="filters-price__input" id="range-input-max" type="number" name="max-price" min="500" max="999999" placeholder="999999">
+          <span class="filters-price__text">Р</span>
+        </label>
+      </div>
+    </div>
+    
     <button class="modal__button-submit" type="submit">Отправить</button>
   </form>
 </div>
@@ -107,12 +127,21 @@
   </div>
   <div class="template__nose template__change-element"></div>
   <div class="template__mouth template__change-element"></div>
-  <label><input type="text" name="color-left-eye"></label>
-  <label><input type="text" name="color-right-eye"></label>
-  <label><input type="text" name="color-nose"></label>
-  <label><input type="text" name="color-mouth"></label>
+  <label>
+    <input type="text" name="color-left-eye">
+  </label>
+  <label>
+    <input type="text" name="color-right-eye">
+  </label>
+  <label>
+    <input type="text" name="color-nose">
+  </label>
+  <label>
+    <input type="text" name="color-mouth">
+  </label>
 </div>
 
+<script src="libs/nouislider.min.js"></script>
 <script src="js/main.js" type="module"></script>
 </body>
 </html>
