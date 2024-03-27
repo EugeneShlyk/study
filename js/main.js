@@ -29,8 +29,7 @@ if ( rangeSlider ) {
   let setRangeSlider = (index, value) => {
     let array = [null, null];
     array[index] = value;
-
-    console.log(array);
+    rangeSlider.noUiSlider.set(array);
   }
 
   inputs.forEach((item, index) => {
