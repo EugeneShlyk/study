@@ -1,41 +1,28 @@
-import { modalJs } from './show-modal.js';
-import { faceColorRender } from './face.js';
+const button = document.querySelector('.header__button');
+const buttonRemove = document.querySelector('.header__button--remove');
+const output = document.querySelector('.header__p');
 
-let rangeSlider = document.querySelector('#range-slider');
-let minInput = document.querySelector('#range-input-min');
-let maxInput = document.querySelector('#range-input-max');
-let inputs = [minInput, maxInput];
+function handleButton1Click() {
+  output.textContent = 'Путин - хуйло';
 
-
-
-modalJs();
-faceColorRender();
-
-if ( rangeSlider ) {
-  noUiSlider.create(rangeSlider, {
-    start: [500, 999999],
-    connect: true,
-    step: 1,
-    range: {
-      'min': [500],
-      'max': [999999]
-    }
-  });
-
-  rangeSlider.noUiSlider.on('update', function (values, handle) {
-    inputs[handle].value = Math.round(values[handle]);
-  });
-
-  let setRangeSlider = (index, value) => {
-    let array = [null, null];
-    array[index] = value;
-    rangeSlider.noUiSlider.set(array);
-  }
-
-  inputs.forEach((item, index) => {
-    item.addEventListener('change', (evt) => {
-      console.log(index);
-      setRangeSlider(index, evt.currentTarget.value)
-    });
-  });
+  button.removeEventListener('click', handleButton1Click);
+  buttonRemove.addEventListener('click', handleButton1Click2);
 }
+
+function handleButton1Click2() {
+  output.textContent = 'Путин - чёрт';
+
+  buttonRemove.removeEventListener('click', handleButton1Click2);
+  button.addEventListener('click', handleButton1Click)
+}
+
+button.addEventListener(
+  'click',
+  handleButton1Click
+);
+
+
+
+
+
+

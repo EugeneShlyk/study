@@ -1,28 +1,24 @@
 .header {
-  flex-grow: 0;
-  flex-shrink: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.header__inner {
+  flex-direction: column;
   display: flex;
+  justify-content: center;
   align-items: center;
-  width: 1194px;
-  margin: 0 auto;
-  padding: 18px 0;
+  width: 100%;
+  min-height: 200px;
+  background-color: yellow;
 }
 
-.header__logo {
-  margin: 0 84px 0 7px;
-  padding: 0;
+.header__button,
+.header__button--remove {
+  border: blue;
+  background-color: blue;
+  color: aliceblue;
+  margin: 20px;
+  padding: 10px;
+  cursor: pointer;
 }
 
-.header__logo:hover,
-.header__logo:focus-visible {
-  opacity: 0.6;
-}
-
-.header__logo:active {
-  opacity: 0.3;
+.header__p {
+  min-height: 300px;
+  width: 100%;
 }
